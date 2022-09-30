@@ -1,0 +1,19 @@
+name: formatter
+on: [push, pull_request]
+
+jobs:
+  formatter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: JohnnyMorganz/stylua-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: lua/
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Reformatted via stylua
+          file_pattern: '*.lua'
