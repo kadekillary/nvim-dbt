@@ -35,15 +35,15 @@ function U._get_compiled_file_path(filepath)
 end
 
 local function _split_and_write(data)
-    -- TODO: remove line numbers
-    -- TODO: better filename
-    -- #data provides length of a table
-    -- ensure stderr doesn't override since table has one
-    -- empty string field
-    if #data > 1 then
-        api.nvim_command('20 split new')
-        api.nvim_buf_set_lines(api.nvim_get_current_buf(), 0, -1, false, data)
-    end
+	-- TODO: remove line numbers
+	-- TODO: better filename
+	-- #data provides length of a table
+	-- ensure stderr doesn't override since table has one
+	-- empty string field
+	if #data > 1 then
+		api.nvim_command("20 split new")
+		api.nvim_buf_set_lines(api.nvim_get_current_buf(), 0, -1, false, data)
+	end
 end
 
 function U._run_command(cmd)
