@@ -1,4 +1,4 @@
-local nvimdbt = require('nvim-dbt.endpoints')
+local nvimdbt = require("nvim-dbt.endpoints")
 
 local M = {}
 
