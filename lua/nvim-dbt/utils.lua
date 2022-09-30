@@ -34,7 +34,7 @@ function U._get_compiled_file_path(filepath)
     return compiled_f
 end
 
-function U._split_and_write(data)
+local function _split_and_write(data)
     -- TODO: remove line numbers
     -- TODO: better filename
     -- #data provides length of a table
