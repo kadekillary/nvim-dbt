@@ -20,7 +20,7 @@ end
 
 local M = {}
 
-function M.runner()
+function M.run()
 	c_f = _compile_file_and_get_path()
 
 	-- TODO: make this a setup option
@@ -29,7 +29,7 @@ function M.runner()
 	utils._run_command(cmd)
 end
 
-function M.compiler()
+function M.compile()
 	c_f = _compile_file_and_get_path()
 
 	-- TODO: what is up with random empty lines?
