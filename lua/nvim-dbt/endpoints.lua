@@ -1,4 +1,4 @@
-local utils = require('nvim-dbt.utils')
+local utils = require("nvim-dbt.utils")
 
 local api = vim.api
 local fn = vim.fn
@@ -22,10 +22,11 @@ local M = {}
 
 function M.runner()
     c_f = _compile_file_and_get_path()
-    -- TODO: make this a setup option
-    local cmd = {'psql', os.getenv('PSQL'), '-f', c_f}
 
-    utils._run_command(cmd)
+	-- TODO: make this a setup option
+	local cmd = { "psql", os.getenv("PSQL"), "-f", c_f }
+
+	utils._run_command(cmd)
 end
 
 function M.compiler()
